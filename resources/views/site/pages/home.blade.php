@@ -133,38 +133,16 @@
         <div class="container text-center">
             <div class="row">
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <img src="{{asset('img/leospa-quote.png')}}" class="img-fluid" alt="">
-                        <p>
-                            First i beast be fruitful open you tree all Won't can't likeness and you're have whales creature seed to two grass life blessed you meat shall you winged under from their there he That you're one called gather make much red wherein set fourth green bearing fifth replenish given she had.
-                        </p>
-                        <img src="{{asset('img/leospa-testimonials-default.png')}}" class="img-fluid rounded-circle" alt="">
-                        <h3>Jack Marsh, <span>Executive</span></h3>
-                    </div>
-                    <div class="item">
-                        <img src="{{asset('img/leospa-quote.png')}}" class="img-fluid" alt="">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum feugiat sem et ornare. Ut in suscipit libero. Sed accumsan enim sem, ut consequat ipsum accumsan sed. Donec dictum vehicula tellus eu ullamcorper.rhoncus maximus, augue leo mattis erat, et rutrhoncus egestas neque accumsan quis purus et, varius lorem.
-                        </p>
-                        <img src="{{asset('img/leospa-testimonials-default.png')}}" class="img-fluid rounded-circle" alt="">
-                        <h3>Joseph Austin, <span>Director</span></h3>
-                    </div>
-                    <div class="item">
-                        <img src="{{asset('img/leospa-quote.png')}}" class="img-fluid" alt="">
-                        <p>
-                            Nam arcu turpis, porttitor ac risus id, malesuada dapibus augue. <br> Aliquam blandit tempor neque et viverra. Etiam facilisis orci hendrerit dui pellentesque,
-                        </p>
-                        <img src="{{asset('img/leospa-testimonials-default.png')}}" class="img-fluid rounded-circle" alt="">
-                        <h3>David Hannan, <span>Creative</span></h3>
-                    </div>
-                    <div class="item">
-                        <img src="{{asset('img/leospa-quote.png')}}" class="img-fluid" alt="">
-                        <p>
-                            Quisque sed faucibus risus. Morbi pulvinar neque ex, lobortis blandit est tincidunt non. Aliquam cursus elementum erat, a accumsan mi fermentum eu. Praesent pretium nulla a ullamcorper dignissim.<br>Donec mi dolor, porta sed commodo hendrerit, pharetra ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <img src="{{asset('img/leospa-testimonials-default.png')}}" class="img-fluid rounded-circle" alt="">
-                        <h3>Cheryl Harris, <span>Executive</span></h3>
-                    </div>
+                    @foreach ($testimonials as $item)
+                        <div class="item">
+                            <img src="{{asset('img/leospa-quote.png')}}" class="img-fluid" alt="">
+                            <p>
+                                 {{$item->description}}     
+                            </p>
+                            <img src="{{asset('public/img/testimonials/'. $item->img )}}" class="img-fluid rounded-circle" alt="">
+                            <h3>{{$item->name}}, <span>{{$item->role}}</span></h3>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -272,8 +250,9 @@
                         <div class="appointment-fields">
                             <select name="service" >
                                 <option>SELECT SERVICE</option>
-                                <option>SELECT SERVICE ...</option>
-                                <option>SELECT SERVICE .......</option>
+                                <option>MASSAGE</option>
+                                <option>BODY TREATMENT</option>
+                                <option>HAIR REMOVAL</option>
                               </select>
                             <input name="phone" type="tel" placeholder="PHONE NUMBER" >
                         </div>
