@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 
-    <title>Leospa - Full Stack Challenge</title>
+    <title>Laravel Spa Website Template</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
