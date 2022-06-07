@@ -1,6 +1,5 @@
-# Full Stack Challenge
-
-Projeto de página estática desenvolvideo em Laravel e Bootstrap 5
+# Laravel Spa Website
+Landing Page dinâmica desenvolvida em Laravel e Bootstrap 5
 
 
 ## Funcionalidades Implementadas
